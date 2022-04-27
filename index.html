@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>YouTube Embedded Video Maker</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="Displays YouTube videos in an embedded version." />
+    <link rel="icon" href="assets/img/favicon.ico" sizes="256x256" type="image/x-icon" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <div class="title">
+      <h1 style="display:inline;">YouTube Embedded Video Maker</h1>
+      <span class="big"> - Displays YouTube videos in an embedded version.</span>
+    </div>
+    <div id="input">
+      <input type="text" id="inputURL" autofocus placeholder="Enter the URL of the video you want to watch." /><button type="button" id="submit_button" onclick="submit();">Submit</button>
+    </div>
+    <div id="output">
+      <p id="output_placeholder">The video with the URL you entered will appear here.</p>
+      <div id="error_message" class="hide">
+        <p class="big bold center"><img src="assets/img/frown_icon.svg" width="50px" height="60" alt="frown icon" class="frown_icon">An error Occurred.</p>
+        <p class="center">
+          The requested URL may be incorrect. It has to be either of the following two: 
+        <ul>
+          <li>(https://www.)youtube.com/watch?v=***</li>
+          <li>(https://www.)youtu.be/***</li>
+        </ul>
+        </p>
+      </div>
+      <iframe id="iframe" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <footer>
+      <hr />
+      <div class="flexcontent">
+        <div class="license_indication">
+          <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="assets/img/CC-BY_icon.svg" width="88px" height="31px" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+        </div>
+        <div class="Github_icon">
+          <a alt="link to Github" href="https://www.github.com/jinssai/YouTube_Embedded_Video_Maker"><img src="assets/img/Github_icon.svg" width="50px" height="50px" /></a>
+        </div>
+      </div>
+    </footer>
+    <script type="text/javascript" src="assets/js/submit.js"></script>
+  </body>
+</html>
