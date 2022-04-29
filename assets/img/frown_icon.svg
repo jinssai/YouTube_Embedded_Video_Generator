@@ -22,5 +22,5 @@
 <circle cx="35" cy="40" r="3" fill="#000000" stroke="none" />
 <circle cx="65" cy="40" r="3" fill="#000000" stroke="none" />
 <path d="M35 75q15 -25 30 0" fill="none" stroke="#000000" stroke-width="4" stroke-linecap="round"/>
-<text x="50%" y="95%" text-anchor="middle" font-size="20" class="text">ERROR</text>
+<text x="50%" y="95%" text-anchor="middle" font-size="20" font-family="sans-serif" class="text">ERROR</text>
 </svg>
