@@ -60,7 +60,7 @@ footer {
   outline: solid 1px #4169e1;
   }
 #inputURL {
-  width: 500px;
+  width: 50%;
   height: 20px;
   }
 #submit_button {
@@ -84,8 +84,8 @@ footer {
   transform:translateY(2px); 
   }
 #output {
-  width: 640px;
-  height: 360px;
+  width: 64%;
+  position: relative;
   margin-left: auto;
   margin-right: auto;
   padding: 0;
@@ -94,6 +94,11 @@ footer {
   overflow: hidden;
   display: grid;
   place-items: center;
+  }
+#output:before {
+  content:"";
+  display: block;
+  padding-top: 56.25%;
   }
 #output_placeholder {
   margin: auto;
