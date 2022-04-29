@@ -61,7 +61,7 @@ footer {
   height: 20px;
   }
 #inputURL:focus {
-  border: solid 1px #4169e1;
+  border: solid 2px #4169e1;
   border-radius: 3px;
   }
 #submit_button {
