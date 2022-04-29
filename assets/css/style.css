@@ -85,6 +85,7 @@ footer {
   }
 #output {
   width: 64%;
+  height: auto;
   position: relative;
   margin-left: auto;
   margin-right: auto;
