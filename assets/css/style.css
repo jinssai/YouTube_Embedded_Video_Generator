@@ -4,11 +4,11 @@ body {
 a,a:visited{
   color: #4169e1;
   text-decoration: none;
+  transition: 0.3s;
   }
 a:hover{
   color: #6989e6;
-  transform-origin: 50% 50%;
-  transform: scale(1.01) translateY(-1px);
+  transform: translateY(-1px);
   text-decoration: underline;
   }
 footer {
