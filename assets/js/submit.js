@@ -5,15 +5,16 @@ function submit() {
   const error_message = document.getElementById('error_message');
   let search_result = URL.indexOf('youtube.com/watch?v=');
   let msearch_result = URL.indexOf('youtu.be/');
-  let amp_check = URL.indexOf('&');
+  let amp = URL.indexOf('&');
+  let quest = URL.indexOf('?');
 　　let length = URL.length;
     if( search_result !== -1 ) {
       if( !error_message.hasAttribute('class') ) {
         error_message.setAttribute('class','hide');
       }
       hide('output_placeholder');
-      if( amp_check !== -1 ) {
-        let v = URL.substring(search_result+20,amp_check);
+      if( amp !== -1 ) {
+        let v = URL.substring(search_result+20,amp);
         let newURL = 'https://www.youtube.com/embed/' + v + '?start=0&rel=0&feature=youtu.be';
         iframe.setAttribute('src',newURL);
       } else {
@@ -26,8 +27,8 @@ function submit() {
         error_message.setAttribute('class','hide');
       }
       hide('output_placeholder');
-      if( amp_check !== -1) {
-      let v = URL.substring(msearch_result+9,amp_check);
+      if( quest !== -1) {
+      let v = URL.substring(msearch_result+9,quest);
       let newURL = 'https://www.youtube.com/embed/' + v + '?start=0&rel=0&feature=youtu.be';
       iframe.setAttribute('src',newURL);
       } else {
