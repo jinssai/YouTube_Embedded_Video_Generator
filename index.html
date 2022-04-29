@@ -18,19 +18,21 @@
       <div id="input">
         <input type="text" id="inputURL" autofocus placeholder="Enter the URL of the video you want to watch." /><button type="button" id="submit_button" onclick="submit();">Submit</button>
       </div>
-      <div id="output">
-        <p id="output_placeholder">The video with the URL you entered will appear here.</p>
-        <div id="error_message" class="hide">
-          <p class="big bold center"><img src="assets/img/frown_icon.svg" width="50px" height="60" alt="frown icon" class="frown_icon">An error Occurred.</p>
-          <p class="center">
-            The requested URL may be incorrect. It has to be either of the following two: 
-          <ul>
-            <li>(https://www.)youtube.com/watch?v=***</li>
-            <li>(https://www.)youtu.be/***</li>
-          </ul>
-          </p>
+      <div id="output_wrapper">
+        <div id="output">
+          <p id="output_placeholder">The video with the URL you entered will appear here.</p>
+          <div id="error_message" class="hide">
+            <p class="big bold center"><img src="assets/img/frown_icon.svg" width="50px" height="60" alt="frown icon" class="frown_icon">An error Occurred.</p>
+            <p class="center">
+              The requested URL may be incorrect. It has to be either of the following two: 
+            <ul>
+              <li>(https://www.)youtube.com/watch?v=***</li>
+              <li>(https://www.)youtu.be/***</li>
+            </ul>
+            </p>
+          </div>
+          <iframe id="iframe" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
-        <iframe id="iframe" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
       <footer>
         <hr />
