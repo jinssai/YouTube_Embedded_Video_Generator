@@ -56,12 +56,12 @@ footer {
   display: flex;
   justify-content: center;
   }
-#input:focus {
-  outline: solid 1px #4169e1;
-  }
 #inputURL {
   width: 50%;
   height: 20px;
+  }
+#inputURL:focus {
+  outline: solid 1px #4169e1;
   }
 #submit_button {
   user-select: none;
@@ -84,8 +84,8 @@ footer {
   transform:translateY(2px); 
   }
 #output {
-  width: 100%;
-  height: 100%;
+  width: 640px;
+  height: 360px;
   margin-left: auto;
   margin-right: auto;
   padding: 0;
@@ -94,16 +94,6 @@ footer {
   overflow: hidden;
   display: grid;
   place-items: center;
-  }
-#output_wrapper {
-  width: 64%;
-  height: auto;
-  position: relative;
-  }
-#output_wrapper:before {
-  content:"";
-  display: block;
-  padding-top: 56.25%;
   }
 #output_placeholder {
   margin: auto;
