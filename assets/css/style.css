@@ -57,7 +57,7 @@ footer {
   justify-content: center;
   }
 #inputURL {
-  width: 50%;
+  width: 500px;
   height: 20px;
   }
 #inputURL:focus {
