@@ -77,11 +77,11 @@ let data = decodeURIComponent(getParam('q'));
 }
 window.onkeydown = (e) => {
   const key = e.keyCode || e.charCode || 0;
-  if (key == 17) {
+  if (key == 191) {
     document.getElementById('inputURL').focus();
   }
 }
-<!--
+/*
 window.onkeypress = (e) => {
 alert('Press Ctrl to jump to the input field.');
-}-->
+} */
