@@ -81,6 +81,7 @@ window.onkeydown = (e) => {
     document.getElementById('inputURL').focus();
   }
 }
+<!--
 window.onkeypress = (e) => {
 alert('Press Ctrl to jump to the input field.');
-}
+}-->
