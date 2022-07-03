@@ -69,7 +69,7 @@ function getParam(name, url) {
   return decodeURIComponent(results[2].replace(/\+/g, " "));
   }
 let data = decodeURIComponent(getParam('q'));
-if(data) {
+if(!data == null) {
  　document.getElementById('inputURL').value = data;
   submit();
 }
