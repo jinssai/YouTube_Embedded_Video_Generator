@@ -1,5 +1,5 @@
 function submit() {
-　const textinput = document.getElementById('inputURL');
+　　const textinput = document.getElementById('inputURL');
   const iframe = document.getElementById('iframe');
   const error_message = document.getElementById('error_message');
   let URL = document.getElementById('inputURL').value;
@@ -7,35 +7,34 @@ function submit() {
   let msearch_result = URL.indexOf('youtu.be/');
   let amp = URL.indexOf('&');
   let quest = URL.indexOf('?');
-　let length = URL.length;
-  if( search_result !== -1 ) {
-    if( !error_message.hasAttribute('class') ) {
-      hide('error_message');
-    }
-    hide('output_placeholder');
-    if( amp !== -1 ) {
-      ytdisplay(search_result+20,amp);
+　　let length = URL.length;
+    if( search_result !== -1 ) {
+      if( !error_message.hasAttribute('class') ) {
+        hide('error_message');
+      }
+      hide('output_placeholder');
+      if( amp !== -1 ) {
+        ytdisplay(search_result+20,amp);
+      } else {
+        ytdisplay(search_result+20,length);
+      }
+    } else if( msearch_result !== -1 ) {
+      if( !error_message.hasAttribute('class') ) {
+        hide('error_message');
+      }
+      hide('output_placeholder');
+      if( quest !== -1) {
+        ytdisplay(msearch_result+9,quest);
+      } else {
+        ytdisplay(msearch_result+9,length);
+      }
     } else {
-      ytdisplay(search_result+20,length);
+      if( iframe.hasAttribute('src') ) {
+        iframe.removeAttribute('src');
+      }
+      hide('output_placeholder');
+      show('error_message');
     }
-  } else if( msearch_result !== -1 ) {
-    if( !error_message.hasAttribute('class') ) {
-      hide('error_message');
-    }
-    hide('output_placeholder');
-    if( quest !== -1) {
-      ytdisplay(msearch_result+9,quest);
-    } else {
-      ytdisplay(msearch_result+9,length);
-    }
-  } else {
-    if( iframe.hasAttribute('src') ) {
-      iframe.removeAttribute('src');
-    }
-    hide('output_placeholder');
-    show('error_message');
-    textinput.blur();
-  }
 }
 function hide(element_name) {
   let element = document.getElementById(element_name);
@@ -53,7 +52,7 @@ function ytdisplay(start,end) {
   iframe.setAttribute('src',newURL);
   textinput.blur();
 }
-document.getElementById('inputURL').onkeypress = (e) => {
+document.getElementById('inputURL').onkeydown = (e) => {
   const key = e.keyCode || e.charCode || 0;
   if (key == 13) {
     submit();
@@ -68,8 +67,20 @@ function getParam(name, url) {
   if (!results[2]) return '';
   return decodeURIComponent(results[2].replace(/\+/g, " "));
   }
+let paramq = location.search.indexOf('q=');
+if(paramq !== -1) {
 let data = decodeURIComponent(getParam('q'));
-if(!data == null) {
- 　document.getElementById('inputURL').value = data;
-  submit();
+  if(data) {
+   　document.getElementById('inputURL').value = data;
+    submit();
+  }
+}
+window.onkeydown = (e) => {
+  const key = e.keyCode || e.charCode || 0;
+  if (key == 17) {
+    document.getElementById('inputURL').focus();
+  }
+}
+window.onkeypress = (e) => {
+alert('Press Ctrl to jump to the input field.');
 }
